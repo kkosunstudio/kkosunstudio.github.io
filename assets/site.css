@@ -1,0 +1,32 @@
+/* 꼬순 스튜디오 사이트 공통 스타일(모든 페이지가 함께 씀) */
+:root { --bg: #fff8ec; --card: #ffffff; --ink: #3d2718; --sub: #7d5f47; --accent: #c06a14; --line: #f0dcc0; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1f1812; --card: #2a2119; --ink: #f6e7d3; --sub: #c9ae92; --accent: #f3b25a; --line: #3d3025; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif; line-height: 1.7; }
+main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+a { color: var(--accent); overflow-wrap: anywhere; }
+h1 { font-size: 1.8rem; margin: 0 0 4px; }
+h2 { font-size: 1.15rem; margin: 28px 0 8px; }
+ul { padding-left: 1.2em; }
+.lead, .meta { color: var(--sub); margin: 0 0 24px; }
+footer { margin-top: 40px; font-size: .9rem; color: var(--sub); }
+
+/* 위쪽 이동 버튼 */
+nav { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+nav a { padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: var(--ink); background: var(--card); }
+
+/* 앱 카드(첫 화면 목록·앱 소개) */
+.apps { display: grid; gap: 16px; }
+.app { display: flex; gap: 20px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 20px; }
+.app img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
+.app h2 { margin: 0 0 4px; font-size: 1.3rem; }
+.app p { margin: 0 0 8px; color: var(--sub); }
+.links { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+
+/* 처리방침 등 긴 글 */
+section.lang { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px; margin-bottom: 28px; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { border: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
